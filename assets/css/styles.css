@@ -259,11 +259,10 @@ input:user-invalid,
     border-radius: 1rem;
     align-items: center;
     justify-content: space-around;
-    /* gap: 1rem; */
     padding: 3rem;
     height: 481px;
     width: 900px;
-    margin: auto;
+    margin: 50px auto;
   }
 
   .results {
