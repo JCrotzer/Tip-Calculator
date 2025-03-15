@@ -240,6 +240,10 @@ input:user-invalid,
 }
 
 @media screen and (min-width: 700px) {
+  main {
+    margin: 50px auto;
+  }
+
   form {
     display: flex;
     flex-direction: row;
