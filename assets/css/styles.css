@@ -110,7 +110,7 @@ form input {
 }
 
 .tip-buttons button {
-  width: 100%;
+  width: 113px;
   height: 48px;
   border: none;
   background-color: var(--very-dark-cyan);
@@ -146,7 +146,7 @@ button:hover {
 }
 
 .custom-tip {
-  width: 146px;
+  width: 113px;
   height: 48px;
   border: none;
   border-radius: 10px;
@@ -259,10 +259,25 @@ input:user-invalid,
     border-radius: 1rem;
     align-items: center;
     justify-content: space-around;
+    gap: 2rem;
     padding: 3rem;
     height: 481px;
     width: 900px;
     margin: 50px auto;
+  }
+
+  .tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tip-btn {
+    width: 113px;
+  }
+
+  .billAmount,
+  .numPeople {
+    width: 379px;
   }
 
   .results {
