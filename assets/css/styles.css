@@ -114,7 +114,6 @@ form input {
   height: 48px;
   border: none;
   background-color: var(--very-dark-cyan);
-  /* margin-bottom: 10px; */
   border-radius: 10px;
   font-size: 24px;
   font-weight: bold;
@@ -283,7 +282,6 @@ input:user-invalid,
   .results {
     width: 413px;
     height: 417px;
-    /* padding: 30px 20px; */
     justify-content: center;
     gap: 100px;
   }
