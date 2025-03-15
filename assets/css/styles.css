@@ -302,5 +302,6 @@ input:user-invalid,
   .form-section {
     width: 379px;
     height: 388px;
+    gap: 2.5rem;
   }
 }
