@@ -1,0 +1,234 @@
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Global */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styles */
+
+body {
+  font-family: "Space Mono", serif;
+  font-size: 24px;
+  background-color: var(--light-grayish-cyan);
+  width: 100%;
+}
+
+form {
+  background-color: var(--white);
+  border-radius: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+
+.form-group {
+  width: 311px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 50px 0;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--dark-grayish-cyan);
+}
+
+.billAmount,
+.numPeople {
+  width: 311px;
+  height: 48px;
+  border-radius: 10px;
+  border: none;
+}
+
+input {
+  text-align: end;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--very-dark-cyan);
+  background-color: var(--very-light-grayish-cyan);
+  cursor: pointer;
+}
+
+input:focus {
+  border: 3px solid var(--strong-cyan);
+}
+
+input:hover {
+  border: 2px solid var(--strong-cyan);
+}
+
+form input {
+  padding-right: 10px;
+}
+
+.tip-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.tip-buttons button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  background-color: var(--very-dark-cyan);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: hsl(173, 61%, 77%);
+  color: var(--very-dark-cyan);
+}
+
+.tip-buttons button:focus,
+.tip-btn.active {
+  background-color: hsl(173, 61%, 77%);
+  color: var(--very-dark-cyan);
+}
+
+.billAmount {
+  background-image: url(/assets/images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+}
+
+.numPeople {
+  background-image: url(/assets/images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+}
+
+.custom-tip {
+  width: 146px;
+  height: 48px;
+  border: none;
+  border-radius: 10px;
+}
+
+.results {
+  width: 311px;
+  background-color: var(--very-dark-cyan);
+  border-radius: 10px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.result-info,
+.result-info-amt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.result-info p,
+.result-info-amt p {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+}
+
+.result-info span,
+.result-info-amt span {
+  font-size: 13px;
+  font-weight: bold;
+  color: var(--grayish-cyan);
+}
+
+#resetBtn {
+  width: 281px;
+  height: 48px;
+  border-radius: 10px;
+  background-color: var(--strong-cyan);
+  border: none;
+  cursor: pointer;
+  color: var(--very-dark-cyan);
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+#resetBtn:hover {
+  background-color: hsl(173, 61%, 77%);
+}
+
+#tipAmount,
+#totalAmount {
+  font-size: 32px;
+  font-weight: bold;
+  color: var(--strong-cyan);
+}
+
+.shake {
+  animation: error-shake 0.5s ease-in-out;
+}
+
+input:user-invalid,
+.user-invalid {
+  border: 3px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+}
+
+/* Animations */
+
+@keyframes error-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25%,
+  75% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
